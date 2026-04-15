@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme {
+    --font-heading: 'Georgia', serif;
+    --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace;
+    
+    --color-background: var(--bg);
+    --color-foreground: var(--ink);
+    --color-border: var(--line);
+    --color-accent: var(--accent);
+    --color-surface: var(--surface);
+}
+
+:root {
+    --bg: #E4E3E0;
+    --ink: #141414;
+    --line: #141414;
+    --accent: #E84A27;
+    --surface: #D8D7D2;
+    
+    --background: var(--bg);
+    --foreground: var(--ink);
+    --card: #fff;
+    --card-foreground: var(--ink);
+    --popover: #fff;
+    --popover-foreground: var(--ink);
+    --primary: var(--ink);
+    --primary-foreground: var(--bg);
+    --secondary: var(--surface);
+    --secondary-foreground: var(--ink);
+    --muted: var(--surface);
+    --muted-foreground: #666;
+    --accent-foreground: #fff;
+    --destructive: #E84A27;
+    --border: var(--line);
+    --input: #fff;
+    --ring: var(--accent);
+    --radius: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-background text-foreground font-sans text-[13px];
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+.branding {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.panel-header {
+    @apply bg-surface border-b border-border px-3 py-2 text-[11px] font-bold uppercase tracking-wider flex justify-between items-center;
+}
+
+.json-block {
+    @apply border-l-2 border-border pl-3 mb-6 opacity-60 transition-opacity;
+}
+
+.json-block.current {
+    @apply opacity-100 border-accent;
+}
+
+.change-card {
+    @apply bg-white border border-border p-3 transition-all;
+    box-shadow: 2px 2px 0 var(--line);
+}
+
+.change-card.flash {
+    @apply bg-[#FFFAF0] border-accent ring-2 ring-accent;
+}

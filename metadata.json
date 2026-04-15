@@ -1,0 +1,6 @@
+{
+  "name": "WebSocket Telemetry Observer",
+  "description": "A professional tool to monitor real-time WebSocket telemetry data with automatic change highlighting and field-specific observation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
